@@ -1,0 +1,252 @@
+
+$light: $blue_light;
+$dark: $blue_dark;
+
+$font: -apple-system,
+BlinkMacSystemFont,
+"segoe ui",
+roboto,
+oxygen,
+ubuntu,
+cantarell,
+"fira sans",
+"droid sans",
+"helvetica neue",
+Arial,
+sans-serif;
+$font-size: 16px;
+$background-color: #435165;
+$login-background-color: #ffffff;
+$login-width: 400px;
+$login-header-color: #686868;
+$login-border-color: #dee0e4;
+$login-button-background-color: $dark;
+$login-button-color: #ffffff;
+$loggedin-background-color: #f3f4f7;
+$content-width: 60%;
+
+/*main vars*/
+$blue: $blue_dark;
+$secondary:hsl(191, 17%, 68%);
+$green:#37cd50;
+$red:#73405c;
+$cyan:#7ebcfa;
+$yellow:#ff9b37;
+$light:#eef0f2;
+$dark:#333;
+/*#3b4a54;*/
+$body-bg:#efefef;
+
+$border-radius-lg:.5rem;
+$border-radius-sm:.4rem;
+$border-width:2px;
+
+$input-focus-border-color: mix(white, $blue, 50);
+$input-focus-box-shadow: 2px 2px 5px #888888;
+
+
+
+
+$br-default: 0.4375rem;
+
+.br-default {
+    border-radius: 0.4375rem;
+}
+
+#br-default {
+    border-radius: 0.4375rem;
+}
+
+.mr-default {
+    margin-right: 0.4375rem;
+}
+
+:root {
+
+    --br-default: 0.4375rem;
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: $font;
+    font-size: $font-size;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /*background-color: var(--background);*/
+    color: var(--fontcolor);
+}
+
+.login,
+.register {
+    width: 400px;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: auto;
+    border-radius: $br-default;
+    -webkit-border-radius: $br-default;
+
+    h1 {
+        text-align: center;
+        color: $login-header-color;
+        font-size: 24px;
+        padding: 20px 0 20px 0;
+        border-bottom: 1px solid $login-border-color;
+    }
+
+    .links {
+        display: flex;
+        padding: 0 15px;
+
+        a {
+            color: mix(#fff, $login-header-color, 50);
+            text-decoration: none;
+            display: inline-flex;
+            padding: 0 10px 10px 10px;
+            font-weight: bold;
+
+            &:hover {
+                color: mix(#fff, $login-header-color, 40);
+            }
+
+            &.active {
+                border-bottom: 3px solid var(--dark);
+                color: var(--dark);
+            }
+        }
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 20px;
+
+        label {
+            border-top-left-radius: $br-default;
+            border-bottom-left-radius: $br-default;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 12%;
+            height: 50px;
+            background-color: var(--dark);
+            color: #fff;
+        }
+
+        input[type="password"],
+        input[type="text"],
+        input[type="private_email"] {
+            width: 80%;
+            height: 50px;
+            border: 1px solid $login-border-color;
+            margin-bottom: 20px;
+            padding: 0 15px;
+            border-top-right-radius: $br-default;
+            /*Omacode*/
+            border-bottom-right-radius: $br-default;
+            /*Omacode*/
+            outline-style: solid;
+            /*Omacode*/
+            outline-width: 0;
+            /*Omacode*/
+            padding-left: 1rem;
+        }
+
+        input[type="password"]:focus,
+        input[type="text"]:focus,
+        input[type="private_email"]:focus {
+            width: 80%;
+            height: 50px;
+            border: 1px solid #dee0e4;
+            margin-bottom: 20px;
+            padding: 0 15px;
+            border-top-right-radius: $br-default;
+            /*Omacode*/
+            border-bottom-right-radius: $br-default;
+            /*Omacode*/
+            outline-style: solid;
+            /*Omacode*/
+            outline-width: 0;
+            /*Omacode*/
+            border: 2px solid var(--light);
+            padding-left: .937rem;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            margin-top: 20px;
+            background-color: var(--dark);
+            border: 0;
+            cursor: pointer;
+            font-weight: bold;
+            color: $login-button-color;
+            transition: background-color 0.2s;
+            border-bottom-left-radius: $br-default;
+            /*Omacode*/
+            -webkit-border-bottom-left-radius: $br-default;
+            /*Omacode*/
+            border-bottom-right-radius: $br-default;
+            /*Omacode*/
+            -webkit-border-bottom-right-radius: $br-default;
+            /*Omacode*/
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+
+            &:hover {
+                background-color: var(--darker);
+                transition: background-color 0.2s;
+            }
+        }
+
+        #rememberme {
+            width: 100%;
+            height: auto;
+            padding: 5px 20px;
+            background-color: transparent;
+            color: #000;
+            justify-content: flex-start;
+
+            input {
+                transform: scale(1.3);
+                margin-right: 7px;
+            }
+        }
+
+        .msg {
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        >a {
+            text-decoration: none;
+            color: $login-header-color;
+            width: 100%;
+            padding: 5px 20px;
+
+            &:hover {
+                color: darken($login-header-color, 15);
+            }
+        }
+    }
+}
+
+.auth {
+    background-color:transparent;
+    color:white;
+
+}
+
+
+img.lang {
+    height: 0.8em;
+    border: 1px solid black;
+}
+
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

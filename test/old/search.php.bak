@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Live Search using AJAX</title>
+   <!-- Including jQuery is required. -->
+   <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <!-- Including our scripting file. -->
+   <script type="text/javascript" src="script.js"></script>
+   <!-- Including CSS file. -->
+   <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<!-- Search box. -->
+   <input type="text" id="search" placeholder="Search" />
+   <br>
+   <b>Ex: </b><i>David, Ricky, Ronaldo, Messi, Watson, Robot</i>
+   <br />
+   <!-- Suggestions will be displayed in below div. -->
+   <div id="display"></div>
+   <?php
+   
+echo "9999-12-31 23:59:59 -----" . strtotime("9999-12-31 23:59:59")."<br>";
+echo "1970-01-01 00:00:01 -----" . strtotime("1970-01-01 00:00:00")."<br>";
+echo "2021-10-16 10:27:00 -----" . strtotime("2021-10-16 10:27:00")."<br>";
+
+echo "2021-10-16 10:56:00 -----" . strtotime("2021-10-16 10:56:00")."<br>";
+echo "2021-10-17 21:01:00 -----" . strtotime("2021-10-17 21:01:00")."<br>";
+echo "2022-04-17 21:59:00 -----" . strtotime("2022-04-17 21:59:00")."<br>";
+echo "2022-04-20 16:05:00 -----" . strtotime("2022-04-20 16:05:00")."<br>";
+echo "2022-04-20 16:06:00 -----" . strtotime("2022-04-20 16:06:00")."<br>";
+echo "2022-04-20 16:07:00 -----" . strtotime("2022-04-20 16:07:00")."<br>";
+echo "2022-04-20 17:41:00 -----" . strtotime("2022-04-20 17:41:00")."<br>";
+echo "2022-04-20 21:57:00 -----" . strtotime("2022-04-20 21:57:00")."<br>";
+echo "2022-04-24 14:59:00 -----" . strtotime("2022-04-24 14:59:00")."<br>";
+echo "2022-04-24 15:08:00 -----" . strtotime("2022-04-24 15:08:00")."<br>";
+echo "2022-04-24 19:05:00 -----" . strtotime("2022-04-24 19:05:00")."<br>";
+echo "2022-04-25 13:13:00 -----" . strtotime("2022-04-25 13:13:00")."<br>";
+echo "2022-04-25 18:11:00 -----" . strtotime("2022-04-25 18:11:00")."<br>";
+
+   
+   ?>
+</body>
+</html>

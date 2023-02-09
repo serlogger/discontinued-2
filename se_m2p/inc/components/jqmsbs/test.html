@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta name="robots" content="noindex, nofollow" />
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+        <link rel="stylesheet" href="docs/css/bootstrap-4.5.2.min.css" type="text/css">
+        <link rel="stylesheet" href="docs/css/bootstrap-example.min.css" type="text/css">
+        <link rel="stylesheet" href="docs/css/prettify.min.css" type="text/css">
+        <link rel="stylesheet" href="docs/css/fontawesome-5.15.1-web/all.css" type="text/css">
+
+        <script type="text/javascript" src="docs/js/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="docs/js/bootstrap.bundle-4.5.2.min.js"></script>
+        <script type="text/javascript" src="docs/js/prettify.min.js"></script>
+
+        <link rel="stylesheet" href="dist/css/bootstrap-multiselect.css" type="text/css">
+        <script type="text/javascript" src="dist/js/bootstrap-multiselect.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                window.prettyPrint() && prettyPrint();
+            });
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#example-enableClickableOptGroups-disabled').multiselect({
+                    enableClickableOptGroups: true,
+                    enableFiltering: true
+                });
+            });
+        </script>
+        <select id="example-enableClickableOptGroups-disabled" multiple="multiple">
+<!--                <option value="1-1" disabled>Option 1.1</option>
+                <option value="1-2" selected="selected">Option 1.2</option>
+                <option value="1-3" selected="selected">Option 1.3</option>-->
+            <optgroup label="General">
+                <option value="credit_debit">Credit and debit cards</option>
+                <option value="mobile_payments">Mobile payments</option>
+                <option value="iban">Bank transfers (IBAN)</option>
+                <option value="cash">Cash</option>
+            </optgroup>
+            <optgroup label="Cryptocurrencies">
+                <option value="btc">Bitcoin</option>
+                <option value="eth">Ethereum</option>
+                <option value="doge">Dogecoin</option>
+                <option value="ltc">Litecoin</option>
+            </optgroup>
+            <optgroup label="Ohter">
+                <option value="paypal">PayPal</option>
+                <option value="klarna">Klarna</option>
+                <option value="skrill">Skrill</option>
+                <option value="payeer">Payeer</option>
+                <option value="more_available">More methods available, specify in description</option>
+            </optgroup>
+                
+        </select>
+    </body>
+</html>

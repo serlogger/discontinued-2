@@ -1,0 +1,124 @@
+{
+    "diffEditor.wordWrap": "on",
+    "editor.wordWrap": "on",
+    "editor.autoIndent": "advanced",
+    "editor.acceptSuggestionOnEnter": "off",
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.iconTheme": "vscode-icons",
+    "editor.formatOnPaste": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "bracket-pair-colorizer-2.depreciation-notice": false,
+    "workbench.startupEditor": "none",
+    "zenMode.centerLayout": false,
+    "php.validate.executablePath": "C:/xampp/php/php.exe",
+    "editor.hover.enabled": false,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "keyword.control"
+                ],
+                "settings": {
+                    "foreground": "#db58d9"
+                }
+            },
+            {
+                "scope": [
+                    "support.function",
+                    "entity.name.function",
+                    "meta.method-call.php",
+                    "entity.name.function.js",
+                    "meta.function-call.js",
+                    "meta.property-value.scss",
+                    "meta.property-list.scss",
+                    "entity.other.attribute-name.class.css",
+                    "entity.other.attribute-name.id.css",
+                    "entity.name.tag.css",
+                    "entity.other.attribute-name.pseudo-class.css",
+                    "constant.numeric",
+                    "keyword.other.unit",
+                    "keyword.control.import.include"
+                ],
+                "settings": {
+                    "foreground": "#c9cf1f"
+                }
+            },
+            {
+                "scope": [
+                    "meta.property-name.scss",
+                    "variable",
+                    "variable.scss",
+                    "meta.property-value.scss",
+                    "entity.other.attribute-name",
+                    "meta.attribute.placeholder.html",
+                    "meta.tag.structure.input.void.html",
+                    "meta.block.js",
+                    "meta.arrow.js",
+                    "meta.object-literal.key.js",
+                    "meta.object.member.js",
+                    "meta.objectliteral.js",
+                    "new.expr.js",
+                    "support.type.property-name",
+                    "support.variable",
+                    "support.type.vendored.property-name"
+                ],
+                "settings": {
+                    "foreground": "#38d2f5"
+                }
+            },
+            {
+                "scope": [
+                    "string",
+                    "constant.other.color.rgb-value",
+                    "support.constant.property-value",
+                    "support.constant.font-name",
+                    "support.constant.media",
+                    "constant.character.escape",
+                    "support.constant.color.w3c-standard-color-name.css",
+                    "support.constant.color.w3c-extended-color-name.css"
+                ],
+                "settings": {
+                    "foreground": "#f08d1f"
+                }
+            },
+            {
+                "scope": [
+                    "comment"
+                ],
+                "settings": {
+                    "foreground": "#22a30b"
+                }
+            },
+            {
+                "scope": [
+                    "entity.name.tag",
+                    "keyword.other",
+                    "punctuation.section.embedded.begin.php",
+                    "punctuation.section.embedded.end.php",
+                    "constant.language"
+                ],
+                "settings": {
+                    "foreground": "#5071f2"
+                }
+            },
+            {
+                "scope": [
+                    "support.class.builtin",
+                    "support.class.exception"
+                ],
+                "settings": {
+                    "foreground": "#14cca8"
+                }
+            },
+            {
+                "scope": [
+                    "string.regexp"
+                ],
+                "settings": {
+                    "foreground": "#d43b3b"
+                }
+            }
+        ]
+    },
+    "extensions.ignoreRecommendations": true
+}

@@ -1,0 +1,17 @@
+* {
+    --whitest: white;
+    --lightest: #e7edf2;
+    --lighter2: #cedae4;
+    --lighter: #a8bdcf;
+    --light: #82a1ba;
+    --neutral: #5a7991;
+    --dark: #405c73;
+    --darker: #2b3e4d;
+    --darkest: #2b3e4d;
+    --blackest: black;
+
+    --background: white;
+    --form_background: white;
+    --disabled_form_background: #e9ecef;
+    --fontcolor: black;
+}

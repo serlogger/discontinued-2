@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#slideSource.fade {
+  opacity: 1;
+  transition: opacity 1s; 
+}
+
+#slideSource {
+  opacity: 0;
+  transition: opacity 1s; 
+}
+</style>
+	<title>Fade</title>
+</head>
+<body>
+<button id="handle">Fade</button> 
+<div id="slideSource">Whatever you want here - images or text</div>
+</body>
+<script>var slideSource = document.getElementById('slideSource');
+
+document.getElementById('handle').onclick = function () {
+  slideSource.classList.toggle('fade');
+}</script>
+</html>

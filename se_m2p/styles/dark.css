@@ -1,0 +1,19 @@
+* {
+    /* Light/dark values inverted */
+
+    --whitest: black;
+    --lightest: #2a2a2a;
+    --lighter2: #333333;
+    --lighter: #464646;
+    --light: #555555;
+    --neutral: #5f5f5f;
+    --dark: #666666;
+    --darker: #7a7a7a;
+    --darkest: #808080;
+    --blackest: white;
+
+    --background: rgb(20, 20, 20);
+    --form_background: #262626;
+    --disabled_form_background: #555;
+    --fontcolor: rgb(255, 205, 113);
+}

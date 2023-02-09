@@ -1,0 +1,229 @@
+* {
+	--transition: .25s;
+	--mediumlimit: 1300px;
+	--shadow_width: 5px;
+	/* transition: .15s; */
+}
+
+.grid_container {
+	background: rgba(22, 100, 132, 0.3);
+}
+
+
+/*PAGE*/
+
+	.filter_data {
+		width:97%; 
+		margin-left:1.5%;
+		z-index: -2;
+	}
+
+	#grid_container_page {
+		transition: var(--transition);
+	}
+
+	.grid_container_page_nav_minimized {
+		margin-left: 0;
+	}
+
+	.grid_container_page_nav_maximized {
+		margin-left: 300px;
+	}
+
+	#grid_container_nav { 
+		position:fixed;
+		left:0;
+		top:0; 
+		overflow: hidden;
+		border: 1px solid black;
+		z-index: 1;
+		background: var(--whitest);
+		box-shadow: -5px 0 var(--shadow_width) rgba(0, 0, 0, 0.2) inset;
+		transition: var(--transition);
+	}
+
+	.grid_container_content {
+		transition: var(--transition);
+	}
+
+	.grid_container_nav_maximized {
+		width:300px;
+		height:100%;
+	}
+
+	.grid_container_nav_minimized {
+		width:100px;
+		height:50px;
+	}
+
+	.grid_container_mr_300 {
+		margin-right: 300px;
+	}
+
+	.grid_container_mr_0 {
+		margin-right: 0;
+	}
+/*EO PAGE*/
+
+/*CONTENT*/
+	.grid_container_feed { 
+		grid-area: grid_container_feed;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1300px));
+		grid-template-rows: repeat(auto-fill);
+		justify-content:center;
+		grid-gap:40px;
+		z-index: -2;
+		transition: var(--transition);
+		}
+
+	#grid_container_filters_bar {
+		position:fixed;
+		right:0;
+		top:0;
+		padding-left:calc(var(--shadow_width) + 0.5%);
+		padding-right:.5%;
+		border-left:1px solid var(--dark);
+		box-shadow: 5px 0 var(--shadow_width) rgba(0, 0, 0, 0.2) inset;
+		overflow: hidden;
+		z-index: 1;
+		background: var(--whitest);
+		transition: var(--transition);
+	}
+
+	.sidebar_container {
+		min-width: 280px;
+		height: 100%;
+	}
+
+	.grid_container_filters_bar_max { 
+		width:300px;
+		height:100%;
+	}
+
+	.grid_container_filters_bar_min { 
+		overflow: hidden;
+		width:80px;
+		height:50px;
+		border-bottom:1px solid var(--dark);
+	}
+/*EO CONTENT*/
+
+/*FEED*/
+
+	.grid_container_card {
+		grid-area: grid_container_card;
+		display: grid;
+		gap: 5px;
+	}
+
+	.grid_container_card_large { 
+		grid-template-rows: 1fr 3fr 1fr 3fr 1fr;
+		grid-template-areas:
+			'pic 		    header			header'
+			'pic 		    desc 			desc'
+			'pic 		    cat 			cat'
+			'pic 		    details1        details2'
+			'thumbs_read 	thumbs_read 	thumbs_read';
+		}
+
+	.grid_container_card_medium_large { 
+		grid-template-rows: 1fr 3fr 1fr 3fr 3fr 1fr;
+		grid-template-areas:
+			'pic 		    header			header'
+			'pic 		    desc 			desc'
+			'pic 		    cat 			cat'
+			'pic 		    details1        details1'
+			'pic 		    details2        details2'
+			'thumbs_read 	thumbs_read 	thumbs_read';
+		}
+
+	.grid_container_card_medium_small {
+		grid-template-rows: 1fr 6fr 1fr 3fr 1fr 3fr;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			'header 		header'
+			'pic 		    pic'
+			'thumbs_read	thumbs_read'
+			'desc			desc'
+			'cat            cat'
+			'details1 	    details2';
+	}
+
+	.grid_container_card_small {
+		grid-template-rows: 1fr 6fr 1fr 1fr 1fr 3fr 3fr;
+		grid-template-areas:
+			'header'
+			'pic'
+			'thumbs_read'
+			'desc'
+			'cat'
+			'details1'
+			'details2';
+			}
+/*EO FEED*/
+
+/*CARD*/
+	.header {
+		grid-area: header;
+		display: grid;
+		grid-template-areas:
+			'title user';
+	}
+	.pic { grid-area: pic; 
+		min-width:300px;
+		min-height:300px;}
+	.desc { grid-area: desc; }
+	.cat {grid-area: cat; }
+
+	.details_wrapper_wide { 
+		grid-area: details;
+		display: grid;
+		grid-template-areas:
+			'details1 details2';
+		}
+
+	.details_wrapper_stacked {
+		grid-area: details;
+		display: grid;
+		grid-template-areas:
+			'details1'
+			'details2';
+			}
+
+	.title { grid-area: title; }
+	.user { grid-area: user; }
+
+	.details1 { grid-area: details1; }
+	.details2 { grid-area: details2; }
+
+	.thumbs_read { 
+		grid-area: thumbs_read;
+		display: grid;
+		grid-template-columns: 4fr 1fr;
+		grid-template-areas:
+			'thumbnails call_to_action';
+
+		}
+	.thumbnails { grid-area: thumbnails; }
+	.call_to_action { grid-area: call_to_action; }
+
+	.pic_small { grid-area: pic; 
+		min-width:200px;
+		min-height:200px;}
+
+	.thumbs_read_small {
+		grid-template-areas:
+			'thumbnails'
+			'call_to_action';
+			}
+/*EO CARD*/
+
+#btnFilters {
+	float: right;
+	transition: var(--transition);
+}
+#btnFilters2 {
+	float: right;
+	transition: var(--transition);
+}

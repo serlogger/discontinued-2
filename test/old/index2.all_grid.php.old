@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"></script>
+    <link rel="stylesheet" href="style_screen_width.css">
+</head>
+<body>
+
+<div class="grid_container_page grid_container" id="grid_container_page">
+
+	<div class="grid_container_nav grid_container" id="grid_container_nav">
+        Nav
+        <button id="btnMenu" onclick="buttonclick();">Toggle menu</button>
+        <div style="font-size:36px;">Height: <span id="height"></span></div>
+        <div style="font-size:36px;"><b>Width: <span id="width"></span></b></div>
+    </div>
+    <div class="grid_container_content_nav_menu_on grid_container" id="grid_container_content">
+        <div class="grid_container grid_container_feed" id="grid_container_feed">
+
+        <?php 
+
+        for ($i=1; $i<25; $i++)
+        {
+        echo '
+                    <div class="hdiv">
+                        <div class="grid_container grid_container_card">
+                            <div class="grid_container header">
+                                <div class="title">Title</div>
+                                <div class="user">User</div>
+                            </div>
+                            <div class="pic">Pic '.$i.'</div>
+                            <div class="desc">Description</div>
+                            <div class="cat">Categorization</div>
+                            <div class="grid_container details_wrapper">
+                                <div class="details1">Details1</div>
+                                <div class="details2">Details2</div>
+                            </div>
+                            <div class="grid_container thumbs_read">
+                                <div class="thumbnails">Thumbnails</div>
+                                <div class="call_to_action">Read</div>
+                            </div>
+                        </div>
+                    </div>
+        ';
+        }
+        ?>
+        </div>
+    <div class="grid_container_filters_bar" style="">
+        Sidebar
+    </div>
+    </div>
+
+
+</div>
+    <script>
+        const heightOutput = document.querySelector('#height');
+        const widthOutput = document.querySelector('#width');
+
+        function reportWindowSize() {
+        heightOutput.textContent = window.innerHeight;
+        widthOutput.textContent = window.innerWidth;
+        }
+
+        window.onresize = reportWindowSize;
+        reportWindowSize();
+
+        function buttonclick()    
+        {    
+            var nav = document.getElementById("grid_container_nav");
+            var page = document.getElementById("grid_container_page");
+            
+            if (nav.style.width == "300px")    
+            {    
+                // nav.className = "grid_container_nav grid_container";
+                nav.style.width = "100px";
+                page.style.marginLeft = "100px";
+            } else {    
+                nav.style.width = "300px";
+                page.style.marginLeft = "300px";
+            }
+
+        }
+
+// $(window).resize(function() {
+//             var nav = document.getElementById("grid_container_nav");
+//             var page = document.getElementById("grid_container_page");
+//         if ($(window).width() > 1300) {
+//                 nav.className = "grid_container_nav grid_container";
+//                 page.className = "grid_container_page_nav_menu_on grid_container";
+//                 content.className = "grid_container_content_nav_menu_on grid_container";
+//         }
+//         else {
+//                 nav.className = "grid_container_nav_menu_off grid_container";
+//                 page.className = "grid_container_page_nav_menu_off grid_container";
+//                 content.className = "grid_container_content_nav_menu_off grid_container";
+//         }
+// });
+
+    </script>
+</body>
+</html>

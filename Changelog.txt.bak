@@ -1,0 +1,171 @@
+To be done:
+
+Data_large:
+	- Fix according to the latest pic / mainpic DB changes
+
+Update/create:
+	- Update form, including child items
+	- Add Google recaptcha on the create page and registration / Or just the whole page?
+
+Tehemes:
+	- Set auto dark mode to default
+	- Add theme buttons to the main page
+
+Tabs & bars:
+	- Make thin tabs and subtabs for giant zoom levels
+	- Create a mobile layout
+	- Fix icon margins
+
+GPS:
+	- Copy GPS should be disabled unless there really is a GPS
+	- Show popup: "Copy GPS coordinates" / "Add location to copy its GPS coordinates"
+	- Add "Near me" functionality
+	
+Tests to be done:
+	- Test thumbnail viewing with phone
+
+Auth:
+	- Registration on/off
+	- Login on/off
+	- All text fields on/off
+	- Registration email confirmation
+	- Registration notification 
+	
+	("It's not recommended to share personally identifiable information on this site. This includes but is not limited to names, personal email addresses or personal phone numbers, let alone physical home addresses. This site is subject to the whole internet and once you add information here, it may be read and copied elsewhere by malicious parties. This is usually done on purpose and without your consent. After this, your information may be displayed on other services and furthermore, you may not be able to remove it from its new destination(s). Also removing it from Serlog does not affect other sites. To summarize the above: While adding or editing a service on Serlog, it's important to use functional but not personally identifiable or otherwise vulnerable information.
+	
+	If you decide to not follow the above strongly recommended guidelines and share personally identifiable information on this site, Serlog can not and will not be responsible of neither direct nor indirect consequences it may or may not cause.
+	
+	Other than that, we at Serlog hope that you add many sercives on our platform. We wish you a lot of success in your endeavors!
+	
+	UPDATES
+	
+	Serlog will be updated regularly regarding both security and features. Usually this causes no interruption in the service. However, certain updates require the service go down for a small while.")
+	
+	- Delete account (also info that account data will be deleted after 1 year of inactivity)
+	
+Different units
+	- USD / EUR
+	- Miles / km
+	- Months / weeks / days / hours / minutes / seconds
+
+
+
+------------
+In the future:
+- Date and time for events
+- Date and time range for events
+- autot.serlog.com -> Autokauppa. Osta ja myy autoja.
+- cars.serlog.com -> Car shop. Buy and sell cars.
+- asunnot.serlog.com -> You get the idea!
+- tori.serlog.com -> ...
+- tietokoneet.serlog.com
+- kirjat.serlog.com
+- services.serlog.com --> ohjaus serlog.com
+
+Tietokannassa objektit vois olla nimettyinä (ja samalla rajattuina) tyyliin:
+- Services (sisältää perustiedot kuten hinnan, toimitusajan, jne.)
+- Autot (sisältää kaikki autohässäköinnit, kilsat, katsastukset, ABS, ajonvakautus, rekkari, ym.)
+- Cars (sama enkuksi)
+...Vai pitäiskö olla yks englanninkielinen tietokanta autoille, jota käytetään kaikkialla ja josta haetaan tiedot kaikille - kielet prosessoitaisiin muualla?
+
+Miten laskutus tulisi hoitaa?
+- Voitaisiin hyödyntää view counteria, myöhemmin myös view counteria per kategoria suhteutettuna kaikkiin näyttökertoihin yhteensä, näin saataisiin kompensoitua hintaa. Harvinaisissa kategorioissa on halpaa mainostaa ja suosituissa kalliimpaa. Tulisi siis laskea myös view countit per kategoria ja vielä summata kaikki näyttökerrat yhteen.
+
+Laskutus tulisi hoitaa jälkikäteen, esim. kuun viimeisenä päivänä tsekata paljonko klikkauksia on kyseisen kuun aikana tullut, ja sen perusteella lähettää lasku. Asiakastiliin tulisi myös voida laittaa merkintä maksuhäiriöstä ja tälle kuvaus.
+
+[Become an advertizer]
+--> PayPal 0,10 € / muu minimisumma --> If confirmed, add "TRUE" to user's "Advertiser" column in the DB
+
+Lasku(tushistoria) voisi näyttää tältä:
+
+User ID: 7
+
+Statistics of 06-2022 (whole month, based on UTC+2)
+
+Service ID: 482
+Views: 13
+Price: 13 cnt
+
+Service ID: 483
+Views: 114
+Price: 1.14 EUR
+
+Total: 1.27 EUR
+
+Unpaid as of 2022-06-03--05-22
+
+[Pay via PayPal] --> Redirect to PayPal --> If confirmed, mark as paid --> Otherwise mark as unpaid
+
+[Pay via online bank] --> Show account number and reference ID number --> Check manually and mark as paid
+
+--> Paid as of 2022-06-03--05-23
+
+Customers table should have fields for each payment method (allowed [default] / denied) to avoid continuous misuse. After say 2 successful wire transfers allow denied payment methods (if any exists).
+
+
+
+------------
+Done so far:
+------------
+	2022-05-04 and before, among other properties:
+	- Services can be listed
+	- Services can be filtered by their properties except for locality
+	- Services can be sorted by multiple properties
+	- Search works for users, services and categories (search field should also remember what was searched)
+	- Tabs (view/update) work with PHP (Waiting for JS tabs)
+	- Bot prevention: Google recaptcha is active on the main page
+	
+	2022-05-05
+	- Create form scrolls to bottom on new child item. On reload, retrieves child items from local storage without scrolling / confusing the user
+	
+	2022-05-14
+	- Create service form works for all the essential parts assuming all info is filled. 3-level categories work, assuming all have some data. 
+	- Update / create forms work with child items. Localstorage gets correct values and Serlog also fetches the data into right places. Even updating DB objects works with localStorage.
+	
+	2022-05-18
+	- JS tabs and languages test page built!
+	
+------------
+In progress:
+------------
+
+	2022-05-18
+	- JS tabs (test works)
+	- JS language (test works)
+	- Ekaan versioon ei tuu lainkaan auth?
+	
+	2022-05-27
+	- New proof-of-concept of styles has been created to the test folder. It reacts to window resizing as well as hiding of the sidebars very nicely! Given enough space, it also sorts the feed objects next to each other.
+	
+	2022-06-03
+	- Styles added to the JS test site - they can now be changed without reloading the page
+	
+	
+--------------
+In the future:
+--------------
+
+	- Login to the new system
+	- Services to the new system
+	- Make km - mile converter
+	- Make it for multiple currencies but keep the user's selected currency visible
+		- Use stuff in the currency folder
+	- User pics should actually be numbered and so should service pics be numbered, e.g.
+		- user_7_pic_0
+		- user_7_pic_1
+		- user_9_pic_0
+		- service_465_pic_1
+		- service_465_pic_2
+		  ...
+		- service_465_pic_25
+	- Cookie reminder
+Security
+	- Not more than 1 account per IP address per hour
+	- Not more than 3 services per IP address per hour, max 25 per day
+	- If inarray check for currencies and all dropdowns
+	- jQuery and other links should have backups
+	- dDOS protection
+
+
+	- Serlog is ready!!!
+	- Serlog is live!!!

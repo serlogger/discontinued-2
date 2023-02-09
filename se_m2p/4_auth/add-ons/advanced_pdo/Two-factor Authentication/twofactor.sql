@@ -1,0 +1,2 @@
+ALTER TABLE `accounts` ADD `tfa_code` VARCHAR(255) NOT NULL DEFAULT '';
+ALTER TABLE `accounts` ADD `ip` VARCHAR(255) NOT NULL DEFAULT '';
